@@ -9,6 +9,9 @@ def convert_temperature(input_file, output_parameter, output_file):
         reader = csv.reader(infile)
         writer = csv.writer(outfile)
 
+        #skip header
+        next(reader)
+
         for row in reader:
             date, temp = row
 
