@@ -1,9 +1,9 @@
 import sys
 import csv
-from temperature import c_to_f, f_to_c
+import converter
 
 def convert_temperature(input_file, output_parameter, output_file):
-    conversion_function = c_to_f if output_parameter == 'farenheit' else f_to_c
+    conversion_function = converter.c_to_f if output_parameter == 'farenheit' else converter.f_to_c
 
     with open(input_file, 'r') as infile, open(output_file, 'w', newline='') as outfile:
         reader = csv.reader(infile)
